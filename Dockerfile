@@ -24,8 +24,7 @@ RUN \
   echo "**** install jekyll ****" && \ 
   gem install jekyll bundler && \
   echo "**** install chowdown ****" && \
-  git clone https://github.com/clarklab/chowdown.git /app/chowdown && \
-  cd /app/chowdown
+  git clone https://github.com/clarklab/chowdown.git /app/chowdown
 
 COPY root/ /
 
