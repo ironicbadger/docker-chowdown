@@ -18,16 +18,16 @@ ENV RAILS_ENV="production"
 
 RUN \
   echo "**** install jekyll deps ****" && \
-  apt-get update && \
-  apt-get install -y \
+    apt-get update && \
+    apt-get install -y \
       $RUNTIME_PACKAGES && \
   echo "**** install jekyll ****" && \ 
-  gem install jekyll bundler && \
+    gem install jekyll bundler && \
   echo "**** install chowdown ****" && \
-  git clone https://github.com/clarklab/chowdown.git /app/chowdown
+    git clone https://github.com/clarklab/chowdown.git /app/chowdown
 
 COPY root/ /
 
 WORKDIR /app/chowdown
-EXPOSE 3000
+EXPOSE 4000
 VOLUME /config
