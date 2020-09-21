@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+BASEURL=""
+
+# permissions
+chown -R abc:abc \
+	/app/chowdown \
+	/config
